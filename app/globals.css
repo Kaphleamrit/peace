@@ -1,0 +1,84 @@
+:root {
+  color-scheme: dark;
+  --bg: #05070d;
+  --text: #e6f0ff;
+  --muted: #9fb0ca;
+  --glass: rgba(13, 20, 35, 0.6);
+  --accent: #6ee7ff;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #0d1730 0%, var(--bg) 45%);
+  color: var(--text);
+  font-family: Inter, Segoe UI, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.wrapper { width: min(1120px, 92vw); margin: 0 auto; }
+.section { padding: 4rem 0; }
+
+.hero {
+  position: relative;
+  min-height: 85vh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.hero-image { object-fit: cover; z-index: -2; }
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(5, 7, 13, 0.9), rgba(5, 7, 13, 0.3));
+  z-index: -1;
+}
+.hero-content { width: min(840px, 92vw); }
+.hero h1 { font-size: clamp(2.3rem, 6vw, 4.8rem); margin: 0.3rem 0 1rem; line-height: 1.1; }
+.eyebrow { letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+.cta {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.3rem;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #06101f;
+  background: linear-gradient(90deg, #6ee7ff, #86efac);
+  font-weight: 700;
+}
+
+.facts {
+  margin-top: -3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+.facts article {
+  background: var(--glass);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 1.1rem;
+}
+.facts h3 { margin: 0; color: var(--muted); font-size: 0.9rem; }
+.facts p { margin: 0.3rem 0 0; font-size: 1.05rem; font-weight: 600; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+}
+.card {
+  background: #091327;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.card img { width: 100%; height: 220px; object-fit: cover; }
+.card div { padding: 1rem; }
+
+.itinerary ol { padding-left: 1.2rem; }
+.itinerary li { margin-bottom: 0.75rem; color: #d6e3ff; }
+
+.highlight ul { padding-left: 1.2rem; }
+.footer { padding: 2rem 0 4rem; color: var(--muted); }
