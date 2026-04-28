@@ -1,0 +1,7 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 700'>
+<rect width='1200' height='700' fill='#0f766e'/>
+<circle cx='980' cy='120' r='70' fill='#99f6e4' opacity='0.9'/>
+<path d='M0 560 L180 360 L320 500 L510 300 L720 520 L940 340 L1200 560 L1200 700 L0 700 Z' fill='#99f6e4' opacity='0.35'/>
+<text x='70' y='120' fill='white' font-size='56' font-family='Arial, sans-serif' font-weight='700'>Pokhara</text>
+<text x='70' y='180' fill='white' font-size='28' font-family='Arial, sans-serif' opacity='0.9'>Image placeholder (offline-safe)</text>
+</svg>
