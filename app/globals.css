@@ -82,3 +82,10 @@ body {
 
 .highlight ul { padding-left: 1.2rem; }
 .footer { padding: 2rem 0 4rem; color: var(--muted); }
+
+.meta { color: var(--accent); font-size: 0.9rem; margin-top: 0.3rem; }
+.video-section { padding-top: 1rem; }
+.video-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+.video-card { background:#091327; border:1px solid rgba(255,255,255,.08); border-radius:16px; overflow:hidden; }
+.video-card iframe { width:100%; aspect-ratio:16/9; border:0; }
+.video-card div { padding: 1rem; }
