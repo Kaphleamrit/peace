@@ -89,3 +89,14 @@ body {
 .video-card { background:#091327; border:1px solid rgba(255,255,255,.08); border-radius:16px; overflow:hidden; }
 .video-card iframe { width:100%; aspect-ratio:16/9; border:0; }
 .video-card div { padding: 1rem; }
+
+
+.cta:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  .facts { margin-top: -1.5rem; }
+  .hero { min-height: 75vh; }
+}

@@ -16,7 +16,7 @@ const destinations = [
     bestFor: 'Heritage & architecture',
     description: 'Durbar squares, sacred stupas, artisan lanes, rooftop cafes, and living museum neighborhoods.',
     image:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Patan_Durbar_Square%2C_Nepal.jpg/1280px-Patan_Durbar_Square%2C_Nepal.jpg'
+      '/images/kathmandu.svg'
   },
   {
     title: 'Pokhara',
@@ -24,7 +24,7 @@ const destinations = [
     bestFor: 'Lake life & adventure sports',
     description: 'Mirror-like lakes, Annapurna panoramas, sunrise points, paragliding, zipline, and cafe culture.',
     image:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Phewa_Lake%2C_Pokhara.jpg/1280px-Phewa_Lake%2C_Pokhara.jpg'
+      '/images/pokhara.svg'
   },
   {
     title: 'Chitwan National Park',
@@ -32,7 +32,7 @@ const destinations = [
     bestFor: 'Wildlife safari',
     description: 'Jungle safaris with one-horned rhinos, crocodiles, canoe rides, and rich birdlife.',
     image:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Greater_one_horned_rhino_in_Chitwan.jpg/1280px-Greater_one_horned_rhino_in_Chitwan.jpg'
+      '/images/chitwan.svg'
   },
   {
     title: 'Everest Region (Khumbu)',
@@ -40,7 +40,7 @@ const destinations = [
     bestFor: 'Epic trekking',
     description: 'Legendary trails, Sherpa villages, monasteries, and front-row seats to Himalayan giants.',
     image:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mount_Everest_as_seen_from_Drukair2_PLW_edit.jpg/1280px-Mount_Everest_as_seen_from_Drukair2_PLW_edit.jpg'
+      '/images/everest.svg'
   },
   {
     title: 'Lumbini',
@@ -48,7 +48,7 @@ const destinations = [
     bestFor: 'Spiritual travel',
     description: 'Birthplace of Buddha with peaceful monasteries, gardens, and sacred pilgrimage routes.',
     image:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Maya_devi_temple_lumbini.jpg/1280px-Maya_devi_temple_lumbini.jpg'
+      '/images/lumbini.svg'
   },
   {
     title: 'Mustang',
@@ -56,7 +56,7 @@ const destinations = [
     bestFor: 'Desert mountains & culture',
     description: 'Ancient cave settlements, dramatic high-altitude landscapes, and Tibetan-influenced heritage.',
     image:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Lo_Manthang.jpg/1280px-Lo_Manthang.jpg'
+      '/images/mustang.svg'
   },
   {
     title: 'Rara Lake',
@@ -64,7 +64,7 @@ const destinations = [
     bestFor: 'Remote alpine escape',
     description: 'Crystal-clear blue lake surrounded by forests and snow peaks—ideal for quiet nature retreats.',
     image:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Rara_lake%2C_Mugu.jpg/1280px-Rara_lake%2C_Mugu.jpg'
+      '/images/rara.svg'
   },
   {
     title: 'Ilam Tea Gardens',
@@ -72,7 +72,7 @@ const destinations = [
     bestFor: 'Scenic slow travel',
     description: 'Rolling green tea estates, misty hills, local homestays, and calm panoramic viewpoints.',
     image:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Tea_garden_in_Ilam%2C_Nepal.jpg/1280px-Tea_garden_in_Ilam%2C_Nepal.jpg'
+      '/images/ilam.svg'
   }
 ];
 
@@ -113,7 +113,7 @@ export default function Home() {
       <section className="hero">
         <div className="hero-overlay" />
         <Image
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Nepal_himalayas.jpg/1920px-Nepal_himalayas.jpg"
+          src="/images/hero-nepal.svg"
           alt="Himalayan mountain range in Nepal"
           fill
           priority
@@ -126,7 +126,7 @@ export default function Home() {
             Explore a country of towering peaks, sacred heritage, wild jungles, and unforgettable hospitality.
             Nepal is built for explorers, creators, and dreamers from every corner of the world.
           </p>
-          <a href="#plan" className="cta">Plan Your Journey</a>
+          <a href="#plan" className="cta" aria-label="Jump to the trip planning section">Plan Your Journey</a>
         </div>
       </section>
 
@@ -150,7 +150,13 @@ export default function Home() {
       <section className="wrapper section grid">
         {destinations.map((place) => (
           <article key={place.title} className="card">
-            <Image src={place.image} alt={place.title} width={900} height={560} />
+            <Image
+              src={place.image}
+              alt={place.title}
+              width={900}
+              height={560}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
             <div>
               <h3>{place.title}</h3>
               <p className="meta">{place.province} • {place.bestFor}</p>
